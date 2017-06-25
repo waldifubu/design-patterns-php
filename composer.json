@@ -1,0 +1,18 @@
+{
+    "name": "waldifubu/design-patterns-php",
+    "description": "Nice PHP Scripts to show example design patterns",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Waldemar Dell",
+            "email": "wfubu@web.de"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+      "Patterns\\": "src/"
+    }
+  },
+    "minimum-stability": "stable",
+    "require": {}
+}
