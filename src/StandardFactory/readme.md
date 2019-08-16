@@ -1,0 +1,1 @@
+Full example of a factory with interfaces

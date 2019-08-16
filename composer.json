@@ -1,18 +1,27 @@
 {
-    "name": "waldifubu/design-patterns-php",
-    "description": "Nice PHP Scripts to show example design patterns",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Waldemar Dell",
-            "email": "wfubu@web.de"
-        }
-    ],
+  "name": "waldifubu/design-patterns-php",
+  "license": "MIT",
+  "description": "Nice PHP Scripts to show example design patterns",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Waldemar Dell",
+      "email": "wfubu@web.de"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Patterns\\": "src/"
     }
   },
-    "minimum-stability": "stable",
-    "require": {}
+  "autoload-dev": {
+    "psr-4": {
+      "Patterns\\Test\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^6.3"
+  }
 }

@@ -1,0 +1,1 @@
+Static Factory with string as parameter

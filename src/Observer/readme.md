@@ -1,1 +1,1 @@
-Observer desc
+Observer method - pull variant

@@ -10,11 +10,10 @@ declare(strict_types=1);
 
 namespace Patterns\Decorator;
 
-
 class Index
 {
     public function start()
     {
-        echo 'Hello DEco';
+        echo 'Hello Decorator. soon';
     }
 }
