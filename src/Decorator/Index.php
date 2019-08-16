@@ -14,6 +14,6 @@ class Index
 {
     public function start()
     {
-        echo 'Hello Decorator. soon';
+        echo 'Hello Decorator. soon, soon';
     }
 }
