@@ -6,7 +6,7 @@
  * Time: 21:37
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Patterns\StaticFactory;
 
@@ -16,24 +16,23 @@ namespace Patterns\StaticFactory;
  */
 final class StaticFactory
 {
-    public static $mapping
-        = [
-            'number' => 'FormatNumber',
-            'string' => 'FormatString',
-        ];
+    public static array $mapping = [
+        'number' => FormatNumber::class,
+        'string' => FormatString::class,
+    ];
 
     /**
      * @param string $type
      *
      * @return FormatterInterface
      */
-    public static function factory(string $type) : FormatterInterface
+    public static function factory(string $type): FormatterInterface
     {
-        if(!isset(self::$mapping[$type])) {
-            throw new \InvalidArgumentException('Unknown format: '.$type);
+        if (!isset(self::$mapping[$type])) {
+            throw new \InvalidArgumentException('Unknown format: ' . $type);
         }
 
-        $className = __NAMESPACE__.'\\'.self::$mapping[$type];
+        $className = self::$mapping[$type];
 
         return new $className();
     }

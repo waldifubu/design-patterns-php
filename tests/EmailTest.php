@@ -11,7 +11,6 @@ declare(strict_types = 1);
 namespace Patterns\Test;
 
 use PHPUnit\Framework\TestCase;
-//require_once ("Email.php");
 
 /**
  * @covers Email

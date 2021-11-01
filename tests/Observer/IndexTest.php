@@ -8,15 +8,15 @@
 
 declare(strict_types = 1);
 
-namespace Patterns\Observer;
+namespace Patterns\Test\Observer;
 
 use PHPUnit\Framework\TestCase;
 
 class IndexTest extends TestCase
 {
-    public function testChangeInUserLeadsToUserObserverBeingNotified()
+    public function testChangeInUserLeadsToUserObserverBeingNotified(): void
     {
-        $observer = new UserObserver();
+        $observer = new UserObserverA();
 
         $user = new UserSubject();
         $user->attach($observer);

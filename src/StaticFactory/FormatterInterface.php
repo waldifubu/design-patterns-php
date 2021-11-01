@@ -10,8 +10,7 @@ declare(strict_types = 1);
 
 namespace Patterns\StaticFactory;
 
-
 interface FormatterInterface
 {
-
+    public function format(string $input): string;
 }

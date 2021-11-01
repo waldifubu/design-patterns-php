@@ -12,21 +12,26 @@ namespace Patterns\Observer;
 
 class Index
 {
-    public function start()
+    /**
+     * Observer pattern init file
+     */
+    public function start(): void
     {
-        $observer = new UserObserver();
-        $observer2 = new UserObserver();
+        $userObserverA = new UserObserverA();
+        $userObserverB = new UserObserverB();
 
-        $user = new UserSubject();
+        $userSubject = new UserSubject();
 
         // First
-        $user->attach($observer);
+        $userSubject->attach($userObserverA);
 
         // Second
-        $user->attach($observer2);
+        $userSubject->attach($userObserverB);
 
-        $user->changeEmail('foo@bar.com');
-        echo count($observer->getChangedUsers());
-        echo count($observer2->getChangedUsers());
+        $userSubject->changeEmail('foo@bar.com');
+        $userSubject->detach($userObserverA);
+
+        $userSubject->changeEmail('foo@bar.com');
+
     }
 }

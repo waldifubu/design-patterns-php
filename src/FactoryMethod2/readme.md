@@ -1,0 +1,1 @@
+Another interpretation of Factory Method

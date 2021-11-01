@@ -6,27 +6,28 @@
  * Time: 18:19
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Patterns\Observer;
 
 use SplSubject;
 
-class UserObserver implements \SplObserver
+class UserObserverA implements \SplObserver
 {
     /**
      * @var UserSubject[]
      */
-    private $changedUsers = [];
+    private array $changedUsers = [];
 
     /**
      * It is called by the Subject, usually by SplSubject::notify()
      *
      * @param SplSubject $subject
      */
-    public function update(SplSubject $subject)
+    public function update(SplSubject $subject): void
     {
         $this->changedUsers[] = clone $subject;
+         echo "<br>ConcreteObserverA: Reacted to the event.";
     }
 
     /**

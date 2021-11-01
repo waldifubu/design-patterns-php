@@ -8,12 +8,13 @@
 
 declare(strict_types = 1);
 
-namespace Patterns\StandardFactory;
+namespace Patterns\FactoryMethod;
 
+use JetBrains\PhpStorm\Pure;
 
 class StdoutLoggerFactory implements LoggerFactory
 {
-    public function createLogger(): Logger
+    #[Pure] public function createLogger(): Logger
     {
         return new StdoutLogger();
     }

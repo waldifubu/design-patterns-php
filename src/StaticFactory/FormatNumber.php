@@ -13,5 +13,8 @@ namespace Patterns\StaticFactory;
 
 class FormatNumber implements FormatterInterface
 {
-
+    public function format(string $input): string
+    {
+        return number_format((int) $input);
+    }
 }

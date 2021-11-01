@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace Patterns\StandardFactory;
+namespace Patterns\FactoryMethod;
 
 
 class StdoutLogger implements Logger

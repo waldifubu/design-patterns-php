@@ -12,14 +12,14 @@ namespace Patterns\StaticFactory;
 
 class Index
 {
-    public function start()
+    public function start(): void
     {
         $number = StaticFactory::factory('number');
-        echo 'Object number is instance of:'.get_class($number);
+        echo 'Object number is instance of: ' . get_class($number);
 
         echo '<br>';
 
         $string = StaticFactory::factory('string');
-        echo 'Object string is instance of:'.get_class($string);
+        echo 'Object string is instance of: ' . get_class($string);
     }
 }
